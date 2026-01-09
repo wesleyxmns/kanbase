@@ -3,13 +3,14 @@ import type {
   FilterRule as FilterRuleType,
   FilterOperator
 } from '@/lib/types/kanban';
+import type { DiscoveredField } from '@/lib/utils/data-discovery';
 import { Trash2, Plus, X } from 'lucide-react';
 import { useKanbanStore } from '@/lib/store/use-kanban-store';
 import { Button } from '@/components/ui/button';
 
 interface FilterGroupProps {
   group: FilterGroupType;
-  availableFields: { label: string; value: string }[];
+  availableFields: DiscoveredField[];
 }
 
 export function FilterGroup({ group, availableFields }: FilterGroupProps) {
@@ -103,7 +104,7 @@ export function FilterGroup({ group, availableFields }: FilterGroupProps) {
 
 interface FilterRuleRowProps {
   rule: FilterRuleType;
-  availableFields: { label: string; value: string }[];
+  availableFields: DiscoveredField[];
   onDelete: () => void;
   onUpdate: (updates: Partial<FilterRuleType>) => void;
 }
@@ -155,7 +156,7 @@ function FilterRuleRow({ rule, availableFields, onDelete, onUpdate }: FilterRule
       </select>
 
       <input
-        type={availableFields.find(f => f.value === rule.field)?.type === 'number' ? 'number' : 'text'}
+        type={(availableFields.find(f => f.value === rule.field)?.type ?? 'text') === 'number' ? 'number' : 'text'}
         value={rule.value as string || ''}
         onChange={(e) => onUpdate({ value: e.target.value })}
         placeholder="Valor..."

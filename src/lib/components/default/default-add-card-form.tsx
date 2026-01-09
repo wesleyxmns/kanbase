@@ -17,7 +17,7 @@ interface DefaultAddCardFormProps {
   onCancel: () => void;
 }
 
-export function DefaultAddCardForm({ columnId, onAdd, onCancel }: DefaultAddCardFormProps) {
+export function DefaultAddCardForm({ columnId: _columnId, onAdd, onCancel }: DefaultAddCardFormProps) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState('medium');

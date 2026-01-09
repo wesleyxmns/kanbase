@@ -12,7 +12,7 @@ export default defineConfig({
       insertTypesEntry: true, // Gera a entrada de tipos no package.json
       include: ['src/lib/'],   // Só gera tipos para a pasta da lib
       exclude: ['src/lib/**/*.test.ts', 'src/lib/**/*.spec.ts', 'src/lib/mock/**'],
-      rollupTypes: true, // Gera um único arquivo de tipos
+      rollupTypes: false, // Desabilitar rollup de tipos para evitar erros
     }),
   ],
   resolve: {
