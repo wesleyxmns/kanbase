@@ -49,7 +49,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesleyxmns/kanbase.git"
+    "url": "git+https://github.com/wesleyxmns/kanbase.git"
   },
   "bugs": {
     "url": "https://github.com/wesleyxmns/kanbase/issues"
