@@ -1,0 +1,70 @@
+/* Kanbase CSS Variables - Importado automaticamente */
+/* Este arquivo contém apenas as variáveis CSS customizadas do Kanbase */
+/* O Tailwind CSS deve estar configurado no projeto do usuário */
+
+:root {
+  /* Design Tokens - Kanbase Style */
+  --color-board-bg: #f8fafc; /* slate-50 */
+  --color-column-bg: rgba(241, 245, 249, 0.5); /* slate-100 com transparência */
+  --color-card-bg: #ffffff;
+  --color-card-border: rgba(226, 232, 240, 0.8); /* slate-200 com transparência */
+
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  --radius-card: 0.5rem;
+  --radius-column: 0.75rem;
+}
+
+.dark {
+  --color-board-bg: #0f172a; /* slate-900 */
+  --color-column-bg: rgba(30, 41, 59, 0.5); /* slate-800 com transparência */
+  --color-card-bg: #1e293b; /* slate-800 */
+  --color-card-border: rgba(51, 65, 85, 0.8); /* slate-700 com transparência */
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(2deg) scale(1.02);
+  }
+}
+
+/* Classes utilitárias do Kanbase */
+.bg-board-bg {
+  background-color: var(--color-board-bg);
+}
+
+.bg-column-bg {
+  background-color: var(--color-column-bg);
+}
+
+.bg-card-bg {
+  background-color: var(--color-card-bg);
+}
+
+.border-card-border {
+  border-color: var(--color-card-border);
+}
+
+.rounded-card {
+  border-radius: var(--radius-card);
+}
+
+.rounded-column {
+  border-radius: var(--radius-column);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.animate-tilt {
+  animation: tilt 0.2s ease-in-out forwards;
+}
