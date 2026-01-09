@@ -1,12 +1,14 @@
 <p align="center">
-  <img src="public/assets/kanbase.png" alt="Kanbase Logo" width="180" />
+  <img src="public/assets/kanbase.png" alt="Kanbase Logo" width="280" />
 </p>
 
-# Kanbase
+<p align="center">
+  <strong>Precisão Fluida para Workflows Modernos</strong>
+</p>
 
-### **Precisão Fluida para Workflows Modernos**
-
-**Kanbase** é um componente Kanban de alto desempenho e nível empresarial para React, projetado para lidar com workflows complexos sem comprometer velocidade ou estética. Construído para escala, capaz de renderizar milhares de cards a **60 FPS** graças à virtualização, oferecendo uma experiência premium com física e interações de "Precisão Fluida".
+<p align="center">
+  <strong>Kanbase</strong> é um componente Kanban de alto desempenho e nível empresarial para React, projetado para lidar com workflows complexos sem comprometer velocidade ou estética. Construído para escala, capaz de renderizar milhares de cards a <strong>60 FPS</strong> graças à virtualização, oferecendo uma experiência premium com física e interações de "Precisão Fluida".
+</p>
 
 ---
 

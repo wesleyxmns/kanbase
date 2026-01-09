@@ -44,16 +44,16 @@
     "project-management",
     "workflow"
   ],
-  "author": "",
+  "author": "wesleyxmns",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/wesleyxmns/kanbase.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/wesleyxmns/kanbase/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/wesleyxmns/kanbase#readme",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
