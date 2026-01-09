@@ -1,6 +1,6 @@
 {
   "name": "kanbase",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "High-performance, enterprise-grade Kanban component for React with virtualization, advanced filtering, and fluid precision interactions",
   "type": "module",
   "main": "./dist/kanbase.umd.js",
