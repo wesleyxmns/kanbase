@@ -17,7 +17,10 @@
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
     "jsx": "react-jsx",
     /* Linting */
     "strict": true,
@@ -26,18 +29,13 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    /* --- ADICIONE ESTAS LINHAS --- */
-    /* Configuração de Base e Alias */
+    /* Base e Alias */
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    },
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": false,
-    "outDir": "./dist"
+    }
   },
   "include": [
     "src"
