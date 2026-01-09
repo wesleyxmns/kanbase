@@ -38,12 +38,6 @@ importers:
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.3)
-      react:
-        specifier: ^19.2.0
-        version: 19.2.3
-      react-dom:
-        specifier: ^19.2.0
-        version: 19.2.3(react@19.2.3)
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
@@ -81,6 +75,12 @@ importers:
       globals:
         specifier: ^16.5.0
         version: 16.5.0
+      react:
+        specifier: ^19.2.0
+        version: 19.2.3
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.2.3(react@19.2.3)
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18

@@ -9,10 +9,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
     dts({
-      insertTypesEntry: true, // Gera a entrada de tipos no package.json
-      include: ['src/lib/'],   // Só gera tipos para a pasta da lib
-      exclude: ['src/lib/**/*.test.ts', 'src/lib/**/*.spec.ts', 'src/lib/mock/**'],
-      rollupTypes: false, // Desabilitar rollup de tipos para evitar erros
+      insertTypesEntry: true,
+      include: ['src/lib'],
+      exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**'],
+      rollupTypes: true,
+      tsconfigPath: './tsconfig.app.json',
     }),
   ],
   resolve: {
@@ -75,9 +76,9 @@ export default defineConfig({
         // Nome dos arquivos de assets
         assetFileNames: (assetInfo) => {
           // Verificar se é CSS usando apenas a propriedade names (não depreciada)
-          const isCSS = assetInfo.type === 'asset' && 
+          const isCSS = assetInfo.type === 'asset' &&
             assetInfo.names?.some((name: string) => name.endsWith('.css'));
-          
+
           if (isCSS) {
             return 'kanbase.css';
           }
