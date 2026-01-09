@@ -19,6 +19,13 @@
     },
     "./package.json": "./package.json"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
+  },
   "sideEffects": [
     "./dist/kanbase.es.js",
     "./dist/kanbase.umd.js"
