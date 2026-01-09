@@ -10,10 +10,13 @@ export default defineConfig({
     tailwindcss(),
     dts({
       insertTypesEntry: true,
-      include: ['src/lib'],
-      exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**'],
+      include: ['src/lib/**/*.{ts,tsx}'],
+      exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**', '**/*.stories.tsx'],
       rollupTypes: true,
       tsconfigPath: './tsconfig.app.json',
+      outDir: 'dist',
+      entryRoot: 'src/lib',
+      staticImport: true
     }),
   ],
   resolve: {
@@ -25,20 +28,18 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/lib/index.ts'),
       name: 'Kanbase',
-      formats: ['es', 'umd'], // ES Module (moderno) e UMD (compatibilidade)
+      formats: ['es', 'umd'],
       fileName: (format) => `kanbase.${format}.js`,
     },
-    cssCodeSplit: false, // Incluir CSS no bundle principal
-    sourcemap: true, // Gerar source maps para debugging
-    minify: 'esbuild', // Minificar o código
+    cssCodeSplit: false,
+    sourcemap: true,
+    minify: 'esbuild',
     rollupOptions: {
-      // Externalizar todas as dependências e peer dependencies
       external: [
         'react',
         'react-dom',
         'react/jsx-runtime',
         'tailwindcss',
-        // Dependências que devem ser externalizadas
         '@dnd-kit/core',
         '@dnd-kit/sortable',
         '@dnd-kit/utilities',
@@ -54,7 +55,6 @@ export default defineConfig({
         'zustand/middleware',
       ],
       output: {
-        // Globals para UMD build
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
@@ -73,19 +73,15 @@ export default defineConfig({
           'tailwind-merge': 'tailwindMerge',
           zustand: 'Zustand',
         },
-        // Nome dos arquivos de assets
         assetFileNames: (assetInfo) => {
-          // Verificar se é CSS usando apenas a propriedade names (não depreciada)
           const isCSS = assetInfo.type === 'asset' &&
             assetInfo.names?.some((name: string) => name.endsWith('.css'));
 
           if (isCSS) {
             return 'kanbase.css';
           }
-          // Para outros assets, usar o padrão do Rollup
           return '[name][extname]';
         },
-        // Preservar nomes de módulos para melhor tree-shaking
         preserveModules: false,
       },
     },

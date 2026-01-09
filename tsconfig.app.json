@@ -33,7 +33,11 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist"
   },
   "include": [
     "src"
