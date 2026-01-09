@@ -17,6 +17,12 @@ dist
 dist-ssr
 *.local
 
+# Documentation
+docs/
+
+# Assets
+public/assets/
+
 # Environment variables
 .env
 .env.local
