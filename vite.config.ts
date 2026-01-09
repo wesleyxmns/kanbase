@@ -12,7 +12,7 @@ export default defineConfig({
       insertTypesEntry: true,
       include: ['src/lib'],
       exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**'],
-      rollupTypes: true,
+      rollupTypes: false,
       tsconfigPath: './tsconfig.app.json',
     }),
   ],
