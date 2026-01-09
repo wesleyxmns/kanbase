@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/kanbase.umd.js",
   "module": "./dist/kanbase.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/lib/index.d.ts",
   "files": [
     "dist",
     "assets",
@@ -13,7 +13,7 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/lib/index.d.ts",
       "import": "./dist/kanbase.es.js",
       "require": "./dist/kanbase.umd.js"
     },
@@ -22,7 +22,7 @@
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/index.d.ts"
+        "./dist/lib/index.d.ts"
       ]
     }
   },
