@@ -13,6 +13,7 @@ node_modules
 .pnp.js
 
 # Build outputs
+dist
 dist-ssr
 *.local
 
@@ -41,6 +42,15 @@ public/assets/
 # TypeScript
 *.tsbuildinfo
 .tsbuildinfo
+node_modules/.tmp/
+
+# Arquivos de tipos gerados durante desenvolvimento
+src/**/*.d.ts
+src/**/*.d.ts.map
+src/**/*.js
+src/**/*.js.map
+!src/**/*.d.ts.manual
+!src/vite-env.d.ts
 
 # Testing
 coverage

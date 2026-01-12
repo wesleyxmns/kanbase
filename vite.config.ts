@@ -10,13 +10,18 @@ export default defineConfig({
     tailwindcss(),
     dts({
       insertTypesEntry: true,
-      include: ['src/lib/**/*.{ts,tsx}'],
-      exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**', '**/*.stories.tsx'],
+      include: ['src/lib/**/*.{ts,tsx}', 'src/components/ui/**/*.{ts,tsx}'],
+      exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**', '**/*.stories.tsx', 'src/lib/inject-styles.ts'],
       rollupTypes: true,
+      staticImport: true,
       tsconfigPath: './tsconfig.app.json',
-      outDir: 'dist',
-      entryRoot: 'src/lib',
-      staticImport: true
+      compilerOptions: {
+        rootDir: 'src',
+        baseUrl: '.',
+        paths: {
+          "@/*": ["./src/*"]
+        }
+      }
     }),
   ],
   resolve: {
