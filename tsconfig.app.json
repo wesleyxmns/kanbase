@@ -17,9 +17,9 @@
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": false,
-    "declaration": true,
-    "declarationMap": true,
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
     "emitDeclarationOnly": false,
     "jsx": "react-jsx",
     /* Linting */
