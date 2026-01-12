@@ -16,8 +16,16 @@ node_modules
 dist-ssr
 *.local
 
-# Assets (se não quiser versionar)
+# Documentation
+docs/
+
+# Assets
 public/assets/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
 
 # Editor directories and files
 .vscode/*
@@ -33,15 +41,6 @@ public/assets/
 # TypeScript
 *.tsbuildinfo
 .tsbuildinfo
-node_modules/.tmp/
-
-# Arquivos de tipos gerados durante desenvolvimento
-src/**/*.d.ts
-src/**/*.d.ts.map
-src/**/*.js
-src/**/*.js.map
-!src/**/*.d.ts.manual
-!src/vite-env.d.ts
 
 # Testing
 coverage
