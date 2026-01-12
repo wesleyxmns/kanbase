@@ -129,7 +129,7 @@ export function KanboomBoard<TCard extends { id: string } = KanboomCard, TColumn
     const filteredCards: Record<string, KanboomCard> = {};
 
     // 1. Filter cards
-    Object.values(kanban.cards).forEach(card => {
+    Object.values(kanban.cards).forEach((card: any) => {
       if (evaluateFilter(card, kanban.filters)) {
         filteredCards[card.id] = card;
       }

@@ -138,7 +138,7 @@ function KanbanColumnInner<TCard extends { id: string }, TColumn extends { id: s
                   position: 'relative',
                 }}
               >
-                {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+                {rowVirtualizer.getVirtualItems().map((virtualRow: any) => {
                   const cardId = columnData.cardIds[virtualRow.index];
                   const card = allCards[cardId];
 
