@@ -19,6 +19,8 @@ dist-ssr
 
 # Documentation
 docs/
+*.md
+!README.md
 
 # Assets
 public/assets/
