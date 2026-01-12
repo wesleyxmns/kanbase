@@ -1,1 +1,0 @@
-{"version":3,"file":"fps-monitor.d.ts","sourceRoot":"","sources":["fps-monitor.tsx"],"names":[],"mappings":"AAEA,eAAO,MAAM,MAAM,cA6BlB,CAAC;AAEF,UAAU,mBAAmB;IAC3B,SAAS,EAAE,MAAM,CAAC;IAClB,WAAW,EAAE,MAAM,CAAC;CACrB;AAED,eAAO,MAAM,cAAc,GAAI,4BAA4B,mBAAmB,4CAkE7E,CAAC"}
