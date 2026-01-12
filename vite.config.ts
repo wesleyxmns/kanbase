@@ -14,8 +14,6 @@ export default defineConfig({
       exclude: ['**/*.test.ts', '**/*.spec.ts', 'src/lib/mock/**', '**/*.stories.tsx'],
       rollupTypes: true,
       tsconfigPath: './tsconfig.app.json',
-      outDir: 'dist',
-      entryRoot: 'src/lib',
       staticImport: true
     }),
   ],
